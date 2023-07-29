@@ -34,7 +34,7 @@ const page: FC<pageProps> = ({}) =>{
     drawLine({ prevPoint ,currentPoint , ctx , color})
     })
 
-    // adding clear event socket integratiob
+    // adding clear event socket integration
     socket.on('clear' , clear)
   },[canvasRef])
 
