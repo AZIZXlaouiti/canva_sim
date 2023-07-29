@@ -33,7 +33,10 @@ const page: FC<pageProps> = ({}) =>{
     if (!ctx) return
     drawLine({ prevPoint ,currentPoint , ctx , color})
     })
-  },[])
+
+    // adding clear event socket integratiob
+    socket.on('clear' , clear)
+  },[canvasRef])
 
 
   return (
@@ -45,7 +48,7 @@ const page: FC<pageProps> = ({}) =>{
         onChange={(e) => setColor(e.hex)}
         />
       <button 
-        onClick={clear}>
+        onClick={() => socket.emit('clear')}>
         clear
       </button>
     <canvas
