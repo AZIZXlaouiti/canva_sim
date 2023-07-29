@@ -2,7 +2,7 @@ type drawLineProps = Draw & {
     // merging with other types
     color : string
 }
-
+// line calculation preparing to render
 export const drawLine = ({ prevPoint ,currentPoint , ctx , color }:drawLineProps)=>{
     // connecting prevpoint with currentPoint instead of a seperate dots 
     const { x : currX , y : currY } = currentPoint
