@@ -2,6 +2,7 @@ type drawLineProps = Draw & {
     // merging with other types
     color : string
 }
+
 export const drawLine = ({ prevPoint ,currentPoint , ctx , color }:drawLineProps)=>{
     // connecting prevpoint with currentPoint instead of a seperate dots 
     const { x : currX , y : currY } = currentPoint
@@ -9,7 +10,7 @@ export const drawLine = ({ prevPoint ,currentPoint , ctx , color }:drawLineProps
     const linWidth = 5
 
     let startPoint = prevPoint ?? currentPoint 
-    // if there is a prev point otherwise assing currentPoint
+    // if there is a prev point otherwise assign currentPoint
     ctx.beginPath()
     ctx.lineWidth = linWidth
     ctx.strokeStyle = lineColor 
