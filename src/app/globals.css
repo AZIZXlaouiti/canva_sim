@@ -108,3 +108,7 @@ a {
 canvas{
   background: antiquewhite;
 }
+.container{
+  display: flex;
+  justify-content: flex-end;
+}
